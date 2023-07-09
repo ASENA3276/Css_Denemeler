@@ -1,0 +1,88 @@
+
+
+.box {
+
+   
+   width: 300px;
+   height: 300px;
+   padding: 20px;
+   margin: 20px;
+   float: left;
+
+
+}
+
+
+.container {
+
+   width: 1000px;
+   margin-left: auto;
+   margin-right: auto;
+
+   
+   
+}
+
+.card {
+   background-color: #4CAF50; /* Green */
+   border: none;
+   color: white;
+   padding: 15px 32px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+
+   
+ }
+
+
+.left-bar{
+
+width: 200px;
+float: left;
+}
+
+
+.content {
+
+   width: 800px;
+   float: left;
+}
+
+
+.clear {
+
+clear: both;
+
+}
+
+.card {
+
+   margin-top: 50px;
+   width: 20%;
+   float: left;
+   padding: 5%;
+   background-color: dimgray;
+   margin-right: 3%;
+   border-radius: 70px;
+}
+
+
+.bg-red {
+
+background-color: red;
+
+}
+
+.bg-green {
+
+   background-color: green;
+
+}
+
+.bg-yellow {
+
+   background-color: yellow;
+}
+

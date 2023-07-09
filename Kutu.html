@@ -1,0 +1,403 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<link rel="stylesheet" href="Kutu.css">
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!--Get your own code at fontawesome.com-->
+
+
+<style>
+    div.gallery {
+      border: 1px solid #ccc;
+    }
+    
+    div.gallery:hover {
+      border: 1px solid #777;
+    }
+    
+    div.gallery img {
+      width: 100%;
+      height: auto;
+    }
+    
+    div.desc {
+      padding: 15px;
+      text-align: center;
+    }
+    
+    * {
+      box-sizing: border-box;
+    }
+    
+    .responsive {
+      padding: 0 6px;
+      float: left;
+      width: 24.99999%;
+    }
+    
+    @media only screen and (max-width: 700px) {
+      .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+      }
+    }
+    
+    @media only screen and (max-width: 500px) {
+      .responsive {
+        width: 100%;
+      }
+    }
+    
+    .clearfix:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    </style>
+
+<style>
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+    
+    li {
+      float: left;
+    }
+    
+    li a, .dropbtn {
+      display: inline-block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    li a:hover, .dropdown:hover .dropbtn {
+      background-color: red;
+    }
+    
+    li.dropdown {
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .dropdown-content a:hover {background-color: #f1f1f1;}
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    </style>
+
+
+<style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    /* Style the header */
+    .header {
+      background-color: #f1f1f1;
+      padding: 30px;
+      text-align: center;
+      font-size: 35px;
+    }
+    
+    /* Create three equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 33.33%;
+      padding: 10px;
+      height: 300px; /* Should be removed. Only for demonstration */
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Style the footer */
+    .footer {
+      background-color: #f1f1f1;
+      padding: 10px;
+      text-align: center;
+    }
+    
+    /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+    @media (max-width: 600px) {
+      .column {
+        width: 100%;
+      }
+    }
+    </style>
+
+
+<style>
+    .center {
+      text-align: center;
+    }
+    
+    .pagination {
+      display: inline-block;
+    }
+    
+    .pagination a {
+      color: black;
+      float: left;
+      padding: 8px 16px;
+      text-decoration: none;
+      transition: background-color .3s;
+      border: 1px solid #ddd;
+      margin: 0 4px;
+    }
+    
+    .pagination a.active {
+      background-color: #4CAF50;
+      color: white;
+      border: 1px solid #4CAF50;
+    }
+    
+    .pagination a:hover:not(.active) {background-color: #ddd;}
+    </style>
+    
+    <style>
+        .button {
+          background-color: #4CAF50; /* Green */
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+        }
+        
+        .button2 {background-color: #008CBA;} /* Blue */
+        .button3 {background-color: #f44336;} /* Red */ 
+        .button4 {background-color: #e7e7e7; color: black;} /* Gray */ 
+        .button5 {background-color: #555555;} /* Black */
+        </style>
+   
+</head>
+
+<body>
+
+
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <h1>Font Awesome icon library</h1>
+
+    <p>Some Font Awesome icons:</p>
+    <i class="fas fa-cloud"></i>
+    <i class="fas fa-heart"></i>
+    <i class="fas fa-car"></i>
+    <i class="fas fa-file"></i>
+    <i class="fas fa-bars"></i>
+    
+    <p>Styled Font Awesome icons (size and color):</p>
+    <i class="fas fa-cloud" style="font-size:24px;"></i>
+    <i class="fas fa-cloud" style="font-size:36px;"></i>
+    <i class="fas fa-cloud" style="font-size:48px;color:red;"></i>
+    <i class="fas fa-cloud" style="font-size:60px;color:lightblue;"></i>
+
+
+
+    <h2>Responsive Image Gallery</h2>
+
+    <h4>Resize the browser window to see the effect.</h4>
+    
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="https://picsum.photos/id/237/200/300">
+          <img src="https://picsum.photos/id/217/200/300" alt="Cinque Terre" width="600" height="400">
+        </a>
+        <div class="desc">Add a description of the image here</div>
+      </div>
+    </div>
+    
+    
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="https://picsum.photos/id/297/200/300">
+          <img src="https://picsum.photos/id/537/200/300" alt="Forest" width="600" height="400">
+        </a>
+        <div class="desc">Add a description of the image here</div>
+      </div>
+    </div>
+    
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="https://picsum.photos/id/267/200/300">
+          <img src="https://picsum.photos/id/235/200/300" alt="Northern Lights" width="600" height="400">
+        </a>
+        <div class="desc">Add a description of the image here</div>
+      </div>
+    </div>
+    
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_blank" href="https://picsum.photos/id/537/200/300">
+          <img src="https://picsum.photos/id/237/200/300" alt="Mountains" width="600" height="400">
+        </a>
+        <div class="desc">Add a description of the image here</div>
+      </div>
+    </div>
+    
+    <div class="clearfix"></div>
+    
+    <div style="padding:6px;">
+      <p>This example use media queries to re-arrange the images on different screen sizes: for screens larger than 700px wide, it will show four images side by side, for screens smaller than 700px, it will show two images side by side. For screens smaller than 500px, the images will stack vertically (100%).</p>
+      <p>You will learn more about media queries and responsive web design later in our CSS Tutorial.</p>
+    </div>
+    
+
+
+
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </li>
+      </ul>
+      
+      <h3>Dropdown Menu inside a Navigation Bar</h3>
+      <p>Hover over the "Dropdown" link to see the dropdown menu.</p>
+      
+
+
+
+    <h2>Centered Pagination</h2>
+
+    <div class="center">
+      <div class="pagination">
+      <a href="#">&laquo;</a>
+      <a href="deneme.html">1</a>
+      <a href="deneme.html" class="active">2</a>
+      <a href="deneme.html" class="active">3</a>
+      <a href="#">4</a>
+      <a href="#">5</a>
+      <a href="#">6</a>
+      <a href="#">&raquo;</a>
+      </div>
+    </div>
+    
+
+
+
+
+ <div class="container ">
+
+<div class="left-bar">
+
+    <h1>left-bar</h1>
+
+ Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem, error?
+
+</div>
+
+<div class="content ">
+
+
+    <div class="card">
+
+            <h2>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque expedita sapiente veniam placeat nesciunt possimus accusantium excepturi laudantium impedit mollitia ea praesentium, officiis alias ipsa! Laudantium dignissimos voluptates ad dicta!</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+
+    </div>
+
+
+    <div class="card">
+
+            <h2>Eveniet explicabo quisquam labore fugit dignissimos sequi nostrum iure quos magni similique suscipit dolor dolorem dolorum, a repellendus natus placeat porro asperiores, consectetur debitis blanditiis libero expedita? Ex, voluptatum maxime.</h2>
+            <p>Unde minima culpa quam fugiat!</p>
+
+    </div>
+
+
+    <div class="card">
+
+            <h2>Consectetur obcaecati, est hic aliquam sequi optio ad ducimus quisquam cupiditate rem ipsum blanditiis dolores voluptatem earum aspernatur praesentium error suscipit beatae ea inventore eum placeat. Totam nisi ex vero?</h2>
+            <p>Accusamus ipsam hic nisi aperiam?</p>
+
+    </div>
+
+    
+</div>
+
+
+ </div>
+   
+
+ <h2>Button Colors</h2>
+
+ <p>Change the background color of a button with the background-color property:</p>
+ 
+ <button class="button">Green</button>
+ <button class="button button2">Blue</button>
+ <button class="button button3">Red</button>
+ <button class="button button4">Gray</button>
+ <button class="button button5">Black</button>
+ 
+
+ <h2>CSS Template using Float</h2>
+ <p>In this example, we have created a header, three equal columns and a footer. On smaller screens, the columns will stack on top of each other.</p>
+ <p>Resize the browser window to see the responsive effect.</p>
+ 
+ <div class="header">
+   <h2>Header</h2>
+ </div>
+ 
+ <div class="row">
+   <div class="column" style="background-color: blue;">Column</div>
+   <div class="column" style="background-color:#2a9620;">Column</div>
+   <div class="column" style="background-color:#140101;">Column</div>
+ </div>
+ 
+ <div class="footer">
+   <p>Footer</p>
+ </div>
+
+
+
+ 
+</body>
+</html>
